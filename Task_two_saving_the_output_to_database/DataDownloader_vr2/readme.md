@@ -5,7 +5,7 @@
 #### New changes :
 1. Dynamic start date: 
 in version one the start date was set static to the first of Januray 2016, in this version this parameter have been changed to be dynamic,
-in order to avoid duplication with itration of running the script based on the last record at the database if there is no records will start from the January 1st of 2016.
+in order to avoid duplication with itrations of running the script to be set based on the last record at the database if there is no records will start from the January 1st of 2016.
 
 2. Database Integration: to be able to store the data to the datbase some changed has been made to the script, to open connection with database and write the data.
 
@@ -13,8 +13,8 @@ in order to avoid duplication with itration of running the script based on the l
 1. The script will query the database to get the most update date related to the input currency to avoid data duplication and keep consistent data records
 2. If the no records in the database for this currency, the script will set the default value (2016-01-01) as start date for fetching the historical data.
 
-3. run the request from API to get the data.
-4. Have the data in panadas dataframe.
+3. Run the get request from API to get the data.
+4. Have the data in panadas dataframe for data consistency.
 5. send the dataframe to the database.
 
 
