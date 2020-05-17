@@ -9,4 +9,4 @@
     - Json file with the result, named as result_start_date - end_date.json
 
 #### How to Run:
-    - $ python coinAPI_Downloader_vr2.py -c < CurrencySymbol> -k your-API_KEY
+     $ python coinAPI_Downloader_vr2.py -c < CurrencySymbol> -k your-API_KEY
