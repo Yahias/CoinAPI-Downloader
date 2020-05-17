@@ -5,5 +5,5 @@
 #### Input variables: 
     - cryptocurrency code example : Bitcoin --> BTC
     - API Key
-Output format:
+#### Output format:
     - Json file with the result, named as result_start_date - end_date.json
