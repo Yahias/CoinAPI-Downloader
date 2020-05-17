@@ -11,12 +11,11 @@ Input variables:
 import os
 import requests
 import pandas as pd
-#import numpy as np
 from io import StringIO
 from sqlalchemy import create_engine
 import psycopg2
-import argparse
 from datetime import datetime
+import argparse
 import configparser
 
 
