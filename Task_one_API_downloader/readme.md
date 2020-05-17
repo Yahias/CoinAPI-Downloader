@@ -3,7 +3,7 @@
 #### This Script is for fetching the historical data for cryptocurrencies from CoinAPI.io since the January 1st of 2016.
 #### List of cryptocurrencies: [Bitcoin (BTC), Ethereum (ETH), Ripple (XRP),Litecoin (LTC) ]
 #### Input variables: 
-    - cryptocurrency code example : Bitcoin --> BTC
+    - cryptocurrency symbol example : Bitcoin --> BTC
     - API Key
 #### Output format:
     - Json file with the result, named as result_start_date - end_date.json
