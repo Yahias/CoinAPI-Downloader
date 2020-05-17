@@ -1,7 +1,7 @@
 # Saving the fetched data to the Databse.
 
 ### Steps at galance:
-#### 1- Dtabase prepartion and creation.
+#### 1- Database prepartion and creation.
 #### 2- Run API Downloader Script version 2
 
 
