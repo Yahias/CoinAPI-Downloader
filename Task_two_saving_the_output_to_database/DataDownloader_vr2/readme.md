@@ -1,6 +1,14 @@
 ### CoinAPI Downloader Version 2.0
 
-#### This Script for fetching data from coinAPI and writing it to a database Postgres based on the last record at the database if there is no records will start from the January 1st of 2016.
+#### This Script for fetching data from coinAPI and writing it to a database Postgres.
+
+#### New changes :
+1. Dynamic start date: 
+in version one the start date was set static to the first of Januray 2016, in this version this parameter have been changed to be dynamic,
+in order to avoid duplication with itration of running the script based on the last record at the database if there is no records will start from the January 1st of 2016.
+
+2. Database Integration: to be able to store the data to the datbase some changed has been made to the script, to open connection with database and write the data.
+
 
 
 
@@ -12,17 +20,16 @@ pip install psycopg2
 Or:  
 pip install psycopg2-binary
 
-#### Input variables: 
+### Input variables: 
 - cryptocurrency code example : Bitcoin --> BTC
 - API Key
 
-#### Configuration File:
-db_config.ini 
+### Configuration File: db_config.ini 
 This file conatain all the parameter for the database connection.
+* Defination of the parameters:
+- db_user: Databse account
 
-db_user: Databse account
-
-db_password: The Password
+- db_password: The Password
 
 hostname: The hostname of the database server
 
