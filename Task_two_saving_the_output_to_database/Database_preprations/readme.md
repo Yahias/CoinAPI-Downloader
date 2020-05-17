@@ -9,14 +9,14 @@
 
 #### Tables relationship:
 - Primary key on column : cryptocurrencies.currency_code
--Foreign key on colum : ohlcv_historical_data.currency_code
+- Foreign key on colum : ohlcv_historical_data.currency_code
 
 
 
 #### database prerpartion steps:.
-    1- Create the databse.
-    2- Create the tables.
-    3- Insert Crypto-currncies Refernces data.
+1. Create the databse.
+2. Create the tables.
+3. Insert Crypto-currncies Refernces data.
 
 
 #### Add the bin of postgreSQL to the path to be able to run pg commands:
