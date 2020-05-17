@@ -1,6 +1,22 @@
 
-## Prepration for the database.
-#### The below steps for database and tables creations.
+## The database Preprations
+
+### Schema Desing :
+#### We have two tables:
+ - Table "cryptocurrencies" stores all cryptocurrencies metadata.
+ - Table "ohlcv_historical_data" to store the fethed historical data. 
+ *(ohlcv)--> "Open-high-low-close Volume"*
+
+#### Tables relationship:
+- Primary key on column : cryptocurrencies.currency_code
+-Foreign key on colum : ohlcv_historical_data.currency_code
+
+
+
+#### database prerpartion steps:.
+    1- Create the databse.
+    2- Create the tables.
+    3- Insert Crypto-currncies Refernces data.
 
 
 #### Add the bin of postgreSQL to the path to be able to run pg commands:
