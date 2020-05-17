@@ -28,7 +28,7 @@ currency_code=args.currencysymbol
 API_KEY =args.key
 headers = {'X-CoinAPI-Key': API_KEY}
 #start_date='2016-01-01T00:00:00'
-start_date='2016-06-06'
+start_date='2016-01-01'
 end_date=datetime.today().replace(microsecond=0).isoformat()
 period = '1DAY'
 limit = '10000'
