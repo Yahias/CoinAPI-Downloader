@@ -22,6 +22,13 @@ import configparser
 
 
 def gettingThelastdate(db_user,db_password,hostname,db_port,db_name):
+    """
+    This function is to connect to the database to get the latest record for the input currency, to avoid data duplications.
+    - Input variables: will read from the config file "db_config.ini"
+        [db_user,db_password,hostname,db_port,db_name]
+    - Output Variable:
+        - The latest record date in the database, if full it will return the default value (2016-01-01)
+    """
     try:
         connection = psycopg2.connect(user=db_user,password=db_password,host=hostname,port=db_port,database=db_name)
         cursor = connection.cursor()
@@ -47,6 +54,13 @@ def gettingThelastdate(db_user,db_password,hostname,db_port,db_name):
 
 
 def writingToDatabase(db_user,db_password,hostname,db_port,db_name,df,table_name):
+    """
+    This function is to write the output to the database.
+    -Input Variables:
+        - [db_user,db_password,hostname,db_port,db_name] will be read from configuration file "db_config.ini"
+        - df : the name of panadas dataframe that having the fetched historical data.
+        - table_name : The table of the database at which the data will be saved.
+    """
     try:
         engine = create_engine(f'postgresql://{db_user}:{db_password}@{hostname}:{db_port}/{db_name}')
         df.to_sql(table_name, engine, if_exists='append',index=False)
