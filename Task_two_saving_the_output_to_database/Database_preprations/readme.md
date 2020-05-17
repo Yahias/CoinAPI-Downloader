@@ -13,7 +13,7 @@
 
 
 
-#### database prerpartion steps:.
+#### Database prerpartion steps:.
 1. Create the databse.
 2. Create the tables.
 3. Insert Crypto-currncies Refernces data.
