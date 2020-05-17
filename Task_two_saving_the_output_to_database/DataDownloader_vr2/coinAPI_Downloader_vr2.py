@@ -79,7 +79,7 @@ parser.add_argument("-c", "--currencysymbol", required=True,help="Currencty Symb
 parser.add_argument("-k", "--key", required=True,help="Your API KEY")
 args = parser.parse_args()
 
-
+###Getting the Database parameters
 config = configparser.ConfigParser()
 config.read('db_config.ini')
 db_parameters = config['DB_prameters']
@@ -90,6 +90,7 @@ hostname=db_parameters['hostname']
 db_port=db_parameters['db_port']
 db_name=db_parameters['db_name']
 
+#Setting the variables
 currency_code=args.currencysymbol
 API_KEY =args.key
 headers = {'X-CoinAPI-Key': API_KEY}
@@ -101,6 +102,7 @@ asset_id_base=currency_code.upper()
 asset_id_quote='USD'
 
 if __name__ == "__main__":
+    #Setting the start date
     start_date=gettingThelastdate(db_user,db_password,hostname,db_port,db_name)
     
     print(f'Starting of fetching historical data of {currency_code} starting from {start_date}')
@@ -118,7 +120,7 @@ if __name__ == "__main__":
             data['currency_code'] = currency_code.upper()
             #print(data)
 
-            #Sending to the datbase:
+            #Saving the data to the datbase:
             writingToDatabase(db_user,db_password,hostname,db_port,db_name,data,'ohlcv_historical_data')
         else: 
             print(f"error message{resp.json()}") 
