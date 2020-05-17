@@ -41,7 +41,7 @@ url = f'https://rest.coinapi.io/v1/ohlcv/{asset_id_base}/{asset_id_quote}/histor
 resp = requests.get(url,headers=headers)
 result_json=resp.json()
 print(result_json)
-with open(f'result_{start_date} - {end_date}.json', 'w') as outfile:
+with open(f'result_{currency_code.upper()}_{start_date} - {end_date}.json', 'w') as outfile:
     json.dump(result_json, outfile)
 
 
