@@ -1,6 +1,6 @@
 ### CoinAPI Downloader
 
-#### This Script is for fetching the historical data from cryptocurrencies from CoinAPI.io since the January 1st of 2016.
+#### This Script is for fetching the historical data for cryptocurrencies from CoinAPI.io since the January 1st of 2016.
 #### List of cryptocurrencies: [Bitcoin (BTC), Ethereum (ETH), Ripple (XRP),Litecoin (LTC) ]
 #### Input variables: 
     - cryptocurrency code example : Bitcoin --> BTC
