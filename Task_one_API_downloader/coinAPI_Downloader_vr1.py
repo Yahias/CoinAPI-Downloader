@@ -25,8 +25,6 @@ parser.add_argument("-k", "--key", required=True,help="Your API KEY")
 args = parser.parse_args()
 
 currency_code=args.currencysymbol
-#currency_code='btc'
-#API_KEY ='3D68E0FD-95B6-4673-945B-83A5967955B6'
 API_KEY =args.key
 headers = {'X-CoinAPI-Key': API_KEY}
 #start_date='2016-01-01T00:00:00'
@@ -40,9 +38,6 @@ asset_id_quote='USD'
 print(f'Starting of fetching historical data of {currency_code}')
 
 url = f'https://rest.coinapi.io/v1/ohlcv/{asset_id_base}/{asset_id_quote}/history?period_id={period}&time_start={start_date}&time_end={end_date}&limit={limit}'
-
-
-
 resp = requests.get(url,headers=headers)
 result_json=resp.json()
 print(result_json)
